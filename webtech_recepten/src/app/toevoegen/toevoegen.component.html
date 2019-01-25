@@ -1,0 +1,42 @@
+<div>
+  <h1>Receptendatabase</h1>
+  <form (ngSubmit)='onSubmit()' (ngSubmit)='getAllrecept()' [formGroup]='receptToevoegen'>
+
+    <div class='form-group' >
+      <label for='naam'>naam: </label>
+      <input type='text'  formControlName='naam'>
+    </div>
+    <br />
+
+    <div class='form-group'>
+      <label for='calorien'>caloriën: </label>
+      <input type='text'  formControlName='calorien'>
+    </div>
+    <br />
+
+    <div class='form-group'>
+      <label for='ingredienten'>ingrediënten: </label>
+      <input type='text'  formControlName='ingredienten'>
+    </div>
+    <br />
+
+    <div class='form-group'>
+      <label for='tijd'>benodigde tijd: </label>
+      <input type='text' formControlName='tijd'>
+    </div>
+    <br />
+    <button type='submit' >Toevoegen</button>
+    <br /><br />
+  </form>
+  <button (click)='getAllrecept()'>Alle recepten tonen</button>
+  <!--
+  <ul>
+    <li *ngFor='let recept of recepten'>
+      <label>naam :&nbsp;</label>{{ naam }}<br />
+      <label>calorien :&nbsp;</label>{{ calorien }}<br />
+      <label>ingredienten :&nbsp;</label>{{ ingredienten }}<br />
+      <label>tijd :&nbsp;</label>{{ tijd }}<br />
+    </li>
+  </ul>
+-->
+</div>
