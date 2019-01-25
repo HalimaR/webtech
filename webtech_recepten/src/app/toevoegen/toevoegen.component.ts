@@ -49,8 +49,6 @@ export class ToevoegenComponent implements OnInit {
   getAllrecept(){
     //this.receptservice.getAllrecepten();
     this.receptenLijst = this.receptservice.getAllrecepten();
-    for(let i = 0; i< this.receptenLijst.length; i++){
-    console.log(i);
-    }
+    
   }
 }

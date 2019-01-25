@@ -6,7 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ReceptService {
     
     //public receptLijst: string[];
-    public receptenLijst: string[];
+    //public receptenLijst: string[];
+    public keyLijst: string[];
+    public valueLijst: string[];
     public toegevoegd: string;
     constructor() { }
     receptToevoegen(renaam, rceptlijst){
@@ -24,14 +26,19 @@ export class ReceptService {
     }
     
     getAllrecepten(): Array<string>{
-        console.log("yep");
+        var receptLijst: string[];
+        
         for(var i = 0; i< localStorage.length; i++){
-            var data = JSON.parse(localStorage.getItem(localStorage.key(i)));
-            this.receptenLijst.push(localStorage.key(i));
-            console.log(i);
-
+            let key = localStorage.key(i);
+            let value = localStorage.getItem(key);
+            
+            let recept = key + value;
+            console.log(recept);
+            receptLijst.push(recept);
+            console.log(key, value);
+            //return receptLijst;
         }
-        return this.receptenLijst;
+        return receptLijst;
     }
     
 }
