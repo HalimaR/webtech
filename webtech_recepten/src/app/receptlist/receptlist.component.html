@@ -1,0 +1,12 @@
+<p>receptlist</p>
+<div > 
+<button type="submit" (click)="receptlijst()">list recept</button>
+<ul>
+    <li *ngFor="let resept of list">
+    <span>Naam: {{ resept.name}} </span><br />
+    <span>aantal calorien: {{ resept.aantalcalorien}} </span><br />
+    <span>ingredienten: {{ resept.ingredienten}} </span><br />
+    <span>benodigdetijd: {{ resept.benodigdetijd}} min</span><br /><br />
+    </li>
+</ul>
+</div>

@@ -1,0 +1,29 @@
+
+<div style="text-align:center">
+  <h1> voeg een recept toe </h1>
+</div>
+
+
+<form [formGroup]="recept" (ngSubmit)="onSubmit()">
+<div>
+  <div>
+      <label>Name </label>
+      <input type="text" formControlName="name">
+  </div>
+  <div>
+      <label>aantal caloriën </label>
+      <input type="text" formControlName="aantalcalorien">
+  </div>
+  <div>
+      <label>ingrediënten </label>
+      <input type="text" formControlName="ingredienten">
+  </div>
+  <div>
+      <label>benodigde tijd </label>
+      <input type="text" formControlName="benodigdetijd">
+  </div>
+</div>
+<button class="button" type="submit" (ngSubmit)="onSubmit()">toevoegen</button>
+
+</form>
+<button class="button" type="submit" (click)="dbclear()">clear DB</button>
